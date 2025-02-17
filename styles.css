@@ -46,15 +46,15 @@ h1 {
     width: 90%;
     height: auto;
     text-align: justify;
-    background-image: url('Babi.jpeg'); /* Replace with your image */
+    background-image: url('Babi.jpeg.jiff'); /* Replace with your image */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     -webkit-background-clip: text;
     color: transparent;
     display: block; /* Ensures justification works properly */
-    line-height: 1.8;  /* Adds space between lines */
-    word-spacing: 10px; /* Adjusts space between words */
+    line-height: 1.5;  /* Adds space between lines */
+    word-spacing: 2px; /* Adjusts space between words */
 }
 
 /* Ensure the last line is justified */
@@ -91,7 +91,7 @@ h1 {
         font-size: 3vw;
         padding: 8%;
         line-height: 1.5;
-        word-spacing: 8px;
+        word-spacing: 2px;
     }
 }
 
@@ -104,7 +104,7 @@ h1 {
         font-size: 2vw;
         padding: 6%;
         line-height: 1.6;
-        word-spacing: 8px;
+        word-spacing: 2px;
     }
 }
 
