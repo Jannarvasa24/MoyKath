@@ -40,10 +40,10 @@ h1 {
 
 /* Text Layer */
 .text-image {
-    font-size: 1.2vw;
+    font-size: 1vw;
     font-weight: bold;
     text-transform: uppercase;
-    width: 90%;
+    width: 100%;
     height: auto;
     text-align: justify;
     background-image: url('MoyKath.jpg'); /* Replace with your image */
@@ -53,7 +53,7 @@ h1 {
     -webkit-background-clip: text;
     color: transparent;
     display: block; /* Ensures justification works properly */
-    line-height: 1.5;  /* Adds space between lines */
+    line-height: 1;  /* Adds space between lines */
     word-spacing: 2px; /* Adjusts space between words */
 }
 
@@ -88,9 +88,9 @@ h1 {
         height: 80vh;
     }
     .text-image {
-        font-size: 3vw;
+        font-size: 2vw;
         padding: 8%;
-        line-height: 1.5;
+        line-height: 1;
         word-spacing: 2px;
     }
 }
@@ -103,7 +103,7 @@ h1 {
     .text-image {
         font-size: 2vw;
         padding: 6%;
-        line-height: 1.6;
+        line-height: 1;
         word-spacing: 2px;
     }
 }
@@ -115,7 +115,7 @@ h1 {
     }
     .text-image {
         font-size: 1.2vw;
-        line-height: 1.6;
-        word-spacing: 12px;
+        line-height: 1;
+        word-spacing: 6px;
     }
 }
