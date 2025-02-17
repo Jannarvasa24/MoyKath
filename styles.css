@@ -6,7 +6,7 @@ body, html {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: #111;
     color: white;
@@ -15,15 +15,15 @@ body, html {
     overflow: hidden;
 }
 
-/* Header Container */
+/* Header Container (Fixed) */
 .header-container {
     position: fixed;
     top: 0;
     width: 100%;
     text-align: center;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for visibility */
+    background: rgba(0, 0, 0, 0.8); /* Slightly transparent for better readability */
     padding: 10px 0;
-    z-index: 10; /* Ensures it stays above other content */
+    z-index: 10;
 }
 
 h1 {
@@ -31,19 +31,21 @@ h1 {
     margin: 0;
 }
 
-/* Responsive Container */
-.container {
+/* Lyrics Container (Scrollable) */
+.scroll-container {
     width: 100vw;
-    height: 90vh;
+    height: 90vh; /* Full viewport minus header */
     max-width: 1200px;
     max-height: 700px;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow-y: auto; /* Enables vertical scrolling */
+    overflow-x: hidden;
     position: relative;
     padding: 5%;
-    margin-top: 60px; /* Creates space below fixed header */
+    margin-top: 60px; /* Avoids overlap with the fixed header */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
 }
 
 /* Text Layer */
@@ -52,7 +54,6 @@ h1 {
     font-weight: bold;
     text-transform: uppercase;
     width: 100%;
-    height: auto;
     text-align: justify;
     background-image: url('MoyKath.jpg'); /* Replace with your image */
     background-size: cover;
@@ -60,33 +61,34 @@ h1 {
     background-position: center;
     -webkit-background-clip: text;
     color: transparent;
-    display: block; /* Ensures justification works properly */
-    line-height: 1.4;  /* Adjusts space between lines */
-    word-spacing: 4px; /* Adjusts space between words */
+    display: block;
+    line-height: 1.4;  
+    word-spacing: 4px;
+    padding-bottom: 100px; /* Adds space at the end for better scrolling */
 }
 
-/* Ensure the last line is justified */
+/* Ensures last line is justified */
 .text-image::after {
     content: "";
     display: inline-block;
     width: 100%;
 }
 
-/* Words individually styled */
+/* Individual Word Styling */
 .word {
     display: inline-block;
     transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
     cursor: pointer;
 }
 
-/* Magnification Effect + White Color on Hover */
+/* Hover Effect */
 .word:hover {
     transform: scale(1.8);
-    color: white; /* Word turns white on hover */
-    -webkit-background-clip: unset; /* Ensures text is fully visible */
+    color: white;
+    -webkit-background-clip: unset;
 }
 
-/* RESPONSIVE DESIGN */
+/* Responsive Design */
 @media (max-width: 600px) {
     .header-container {
         padding: 5px 0;
@@ -94,10 +96,10 @@ h1 {
     h1 {
         font-size: 1rem;
     }
-    .container {
+    .scroll-container {
         width: 95vw;
         height: 80vh;
-        margin-top: 50px; /* Adjust margin for small screens */
+        margin-top: 50px;
     }
     .text-image {
         font-size: 2vw;
@@ -108,7 +110,7 @@ h1 {
 }
 
 @media (max-width: 1024px) {
-    .container {
+    .scroll-container {
         width: 85vw;
         height: 70vh;
     }
@@ -121,7 +123,7 @@ h1 {
 }
 
 @media (min-width: 1200px) {
-    .container {
+    .scroll-container {
         width: 100vw;
         height: 100vh;
     }
