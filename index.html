@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lyrics Picture Effect</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Lyrics Image Effect</h1>
+    
+    <div class="container">
+        <div class="text-image">
+            <!-- Lyrics will be inserted dynamically using JavaScript -->
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const lyrics = "Looking in your eyes I see a paradise This world that I found is too good to be true. Standing here beside you Want so much to give you This love in my heart that I'm feeling for you. Let em say we're crazy I don't care about that Put your hand in my hand Baby Don't ever look back. Let the world around us just fall apart Baby we can make it if we're heart to heart. And we can build this dream together Standing strong forever. Nothing's gonna stop us now. And if this world runs out of lovers We'll still have each other. Nothing's gonna stop us. Nothing's gonna stop us now. I'm so glad I found you I'm not gonna lose you Whatever it takes I will stay here with you. Take it to the good times See it through the bad times Whatever it takes is what I'm gonna do. Let them say we're crazy What do they know? Put your arms around me Baby don't ever let go. Let the world around us just fall apart Baby we can make it if we're heart to heart. And we can build this dream together Standing strong forever Nothing's gonna sto us now. And if this world runs out of lovers, We'll still have each other. Nothing's gonna stop us.Nothing's gonna stop us. Ooh All that I need is you, all that I ever need. And all that I want to do. Is hold you forever Ever and ever! And we can build this dream together Standing strong forever Nothing's gonna stop us now. And if this world runs out of lovers, We'll still have each other. Nothing's gonna stop us. Nothing's gonna stop us. And we can build this dream together, Standing strong forever, Nothing's gonna stop us now. And if this world runs out of lovers, We'll still have each other. Nothing's gonna stop us. And we can build this dream together, Standing strong forever. Nothing's gonna stop us now, And if this world runs out of lovers, We'll still have each other. Nothing's gonna stop us. Nothing's gonna stop us now. And we can build this dream together, Standing strong forever, Nothing's gonna stop us."; // Replace with actual lyrics
+            const words = lyrics.split(" ");
+            const textContainer = document.querySelector(".text-image");
+
+            textContainer.innerHTML = words
+                .map(word => `<span class="word">${word}</span>`)
+                .join(" ");
+        });
+    </script>
+
+</body>
+</html>
